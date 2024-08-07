@@ -17,7 +17,19 @@ export default function FriendForm({onCreateFriend, onUpdateFriend}){
     if(id){
       const fetchFriend = async () => {
         const response = await axios.get(`http://localhost:4001/api/friends/${id}`);
-        setFormData(response.data);
+        const friendData = response.data;
+
+        // Format the dates to YYYY-MM-DD
+        const formattedLocations = friendData.locations.map(location => ({
+          ...location,
+          startDate: location.startDate ? new Date(location.startDate).toISOString().split('T')[0] : '',
+          endDate: location.endDate ? new Date(location.endDate).toISOString().split('T')[0] : '',
+        }));
+
+        setFormData({
+          ...friendData,
+          locations: formattedLocations,
+        });
       }
       fetchFriend();
     }

@@ -25,11 +25,11 @@ export default function FriendList({ friends, onDeleteFriend }){
      return (
     <div className="Friend-List">
       <ul>
-        {friends.map((friend) => {
+        {friends.map((friend, idx) => {
           const currentLocation = friend.locations.find(location => isValidLocation(location, today));
           const officialLocation = currentLocation ? currentLocation.city : friend.homeCity;
           return (
-            <FriendCard friend={friend} location={officialLocation} onDeleteFriend={onDeleteFriend}/>
+            <FriendCard key={idx} friend={friend} location={officialLocation} onDeleteFriend={onDeleteFriend}/>
           );
         })}
       </ul>

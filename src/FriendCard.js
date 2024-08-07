@@ -35,7 +35,7 @@ export default function FriendCard({ friend, location, onDeleteFriend }) {
           {friend.name}
         </h3>
         <p>{location}</p>
-        <button onClick={() => onDeleteFriend(friend._id)}>delete friend</button>
+        <button onClick={() => onDeleteFriend(friend._id)}>remove friend</button>
         <button onClick={() => handleEditClick()}>add travel</button>
       </li>
     </div>
