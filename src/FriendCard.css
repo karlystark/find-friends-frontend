@@ -1,0 +1,30 @@
+.friend-icon {
+  width: 200px;
+  height: 200px;
+  margin-left: 25px;
+}
+
+.FriendCard h3, .FriendCard p {
+  text-align: center;
+}
+
+.FriendCard button {
+  float: right;
+  margin-right: 5px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.FriendCard button:hover {
+  background-color: rgb(182, 181, 181);
+}
+
+.FriendCard h3 {
+  font-size: 3rem;
+  margin-top: -2px;
+}
+
+.FriendCard p {
+  font-size: 1.5rem;
+  margin-top: -40px;
+}

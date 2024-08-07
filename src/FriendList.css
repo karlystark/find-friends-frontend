@@ -1,0 +1,27 @@
+.Friend-List {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(196, 215, 196);
+}
+
+.Friend-List li {
+    display: inline-block;
+    list-style-type: none;
+    border: 2px black solid;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+    min-width: 100px;
+    background-color: #fafafa;
+}
+
+.Friend-List-Title {
+    font-size: 3rem;
+    align-self: center;
+}
+
+.Friend-List ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
