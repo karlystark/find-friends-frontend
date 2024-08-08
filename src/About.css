@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 2px black solid;
+  border-radius: 8px;
+  margin: 20px auto;
+  background-color: #fafafa;
 }
 
 .About img {
@@ -15,4 +19,22 @@
 
 .About p {
   font-size: 1.5rem;
+  padding: 20px;
+}
+
+/******* MEDIA QUERIES *******/
+
+@media (max-width: 768px) {
+  .About {
+    margin: 20px;
+  }
+
+  .About h3 {
+    font-size: 1.8rem;
+  }
+
+  .About p {
+    font-size: 1.3rem;
+    text-align: center;
+  }
 }

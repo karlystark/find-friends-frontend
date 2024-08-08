@@ -24,4 +24,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-inline-start: 0;
+}
+
+
+@media(max-width: 768px){
+    .Friend-List {
+        align-items: center;
+    }
 }

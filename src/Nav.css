@@ -8,17 +8,20 @@
 .Logo {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .Nav {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  background-color: #fafafa;
 }
 
 .Logo h1 {
   font-size: 1.8rem;
   align-self: center;
+  margin: 0;
 }
 
 .Nav ul {
@@ -44,4 +47,35 @@
 /* Optional: Add styles for hover, active states, etc. */
 .Nav a:hover {
   text-decoration: underline; /* Underline on hover */
+}
+
+
+/******** MEDIA QUERIES ********/
+
+@media (max-width: 768px) {
+  .Nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Logo h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .Nav ul {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .Nav li {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 10px; /* Add bottom margin */
+  }
+
+  .Nav li:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last item */
+  }
+
 }

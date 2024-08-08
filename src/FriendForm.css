@@ -109,3 +109,15 @@ button:focus {
 .submit-button:hover {
   background-color: #7c628f;
 }
+
+
+@media(max-width: 768px){
+ .Friend-Form {
+  max-width: 80%;
+  align-self: center;
+ }
+
+ .Friend-Form h3 {
+  font-size: 1.8rem;
+ }
+}
