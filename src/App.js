@@ -11,6 +11,7 @@ import './App.css';
 export default function App() {
   const [friends, setFriends] = useState([]);
 
+  // fetch friends from database on initial render
   useEffect(() => {
     const fetchFriends = async () => {
       const res = await axios.get('http://localhost:4001/api/friends');
@@ -22,7 +23,6 @@ export default function App() {
 
   async function handleCreateFriend (newFriend){
     try {
-      console.log("newFriend=", newFriend);
       const response = await axios.post('http://localhost:4001/api/friends', newFriend);
       setFriends([...friends, response.data]);
       console.log('Friend created successfully:', response.data);

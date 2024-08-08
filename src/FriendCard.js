@@ -18,6 +18,7 @@ export default function FriendCard({ friend, location, onDeleteFriend }) {
 
   const navigate = useNavigate();
 
+  // selects a random icon from the icons list to include in friend card
   function randomIcon(icons){
     const randomIdx = Math.floor(Math.random() * 10);
     return icons[randomIdx];

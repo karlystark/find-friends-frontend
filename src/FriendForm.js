@@ -14,6 +14,7 @@ export default function FriendForm({onCreateFriend, onUpdateFriend}){
   const navigate = useNavigate();
 
   useEffect(() => {
+    // if it's in edit view vs. create new friend view
     if(id){
       const fetchFriend = async () => {
         const response = await axios.get(`http://localhost:4001/api/friends/${id}`);
@@ -68,6 +69,7 @@ export default function FriendForm({onCreateFriend, onUpdateFriend}){
       console.error('Error processing request:', error);
     }
 
+    // basic form validation
     if (!formData.name || !formData.homeCity) {
       alert('Please fill in required fields: Name and Home City');
       return;
